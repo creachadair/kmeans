@@ -176,7 +176,7 @@ class KMeans (object):
         """
         self.start()
         while self.step() != 0:
-            if max == 0: break
+            if max is None or max == 0: break
             if max > 0:
                 max -= 1
     
