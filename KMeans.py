@@ -88,7 +88,7 @@ class KMeans (object):
     
     def reset_clusters(self):
         """Discard existing clusters."""
-        for pos in xrange(len(self._kmem)):
+        for pos in range(len(self._kmem)):
             self._kmem[pos] = set()
 
     def reset_centroids(self):
@@ -186,7 +186,7 @@ class KMeans (object):
         the d values are the points in the cluster.
         """
         return [ (self._kctr[p], list(self._kmem[p]))
-                 for p in xrange(len(self._kctr)) ]
+                 for p in range(len(self._kctr)) ]
 
 __all__ = [ "KMeans", "argmin", "euclidean_distance" ]
 
