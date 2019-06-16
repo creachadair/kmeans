@@ -15,7 +15,7 @@ def euclidean_distance(pt1, pt2):
     represented as n-tuples.  This is the default distance metric for the
     K-means object.
     """
-    if len(pt1) <> len(pt2):
+    if len(pt1) != len(pt2):
         raise ValueError("Points are of different dimensionality.")
     
     return sum((x - y) ** 2 for (x, y) in zip(pt1, pt2))
@@ -163,7 +163,7 @@ class KMeans (object):
         for cloc, data in enumerate(self._kmem):
             for pt in data.copy():
                 ploc = argmin(lambda c: self._dist(pt, c), self._kctr)
-                if ploc <> cloc:
+                if ploc != cloc:
                     data.discard(pt)
                     self._kmem[ploc].add(pt)
                     moves += 1
@@ -175,7 +175,7 @@ class KMeans (object):
         have been moved, or until max iterations have passed.
         """
         self.start()
-        while self.step() <> 0:
+        while self.step() != 0:
             if max == 0: break
             if max > 0:
                 max -= 1
