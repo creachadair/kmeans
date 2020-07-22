@@ -8,11 +8,10 @@
 ##
 from distutils.core import setup
 
-setup(name = 'KMeans',
-      version = "1.0",
-      description = 'K-Means Clustering Algorithm Implementation',
-      author = 'M. J. Fromberger',
-      py_modules = ["KMeans"])
+setup(name='KMeans',
+      version="1.0",
+      description='K-Means Clustering Algorithm Implementation',
+      author='M. J. Fromberger',
+      py_modules=["KMeans"])
 
 # Here there be dragons
-      
